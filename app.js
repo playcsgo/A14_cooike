@@ -4,6 +4,10 @@ const app = express()
 const port = 3000
 const routes = require('./routes')
 
+// cookie parser
+const cookieParser = require('cookie-parser')
+app.use(cookieParser())
+
 // express handlebars
 const exphbs = require('express-handlebars')
 app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: 'hbs' }))

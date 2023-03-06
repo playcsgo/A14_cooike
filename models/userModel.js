@@ -6,4 +6,4 @@ const userSchema = new Schema({
   password: {type: String, required: true},
 })
 
-module.exports = mongoose.model('A13user', userSchema)
+module.exports = mongoose.model('A14user', userSchema)

@@ -3,7 +3,11 @@ const router = express.Router()
 let failure = false
 
 router.get('/', (req, res) => {
-  res.render('index', { failure })
+  if (req.cookies.userID) {
+    res.send(`Welcome back, ${req.cookies.userID}`)
+  } else {
+    res.render('index', { failure })
+  }
 })
 
 

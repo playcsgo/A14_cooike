@@ -17,6 +17,7 @@ router.post('/', (req, res) => {
         failure = true
         res.render('index', {failure})
       } else if (user.password === inputPassword) {
+        res.cookie('userID', [inputUserName])
         res.send(`Welcome back, ${user.firstName}`)
       }
     })
